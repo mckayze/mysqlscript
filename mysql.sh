@@ -19,6 +19,6 @@ echo $passwordProduction
 
 mysql -u root -e "ALTER USER 'user'@'127.0.0.1' IDENTIFIED BY '$passwordUser';"
 
-mysql -u root -e "ALTER USER 'development'@'127.0.0.1' IDENTIFIED BY '$passwordDevelopment';"
-mysql -u root -e "ALTER USER 'staging'@'127.0.0.1' IDENTIFIED BY '$passwordStaging';"
-mysql -u root -e "ALTER USER 'production'@'127.0.0.1' IDENTIFIED BY '$passwordProduction';"
+mysql -u root -e "ALTER USER 'development'@'localhost' IDENTIFIED BY '$passwordDevelopment';"
+mysql -u root -e "ALTER USER 'staging'@'localhost' IDENTIFIED BY '$passwordStaging';"
+mysql -u root -e "ALTER USER 'production'@'localhost' IDENTIFIED BY '$passwordProduction';"
