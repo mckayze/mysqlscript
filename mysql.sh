@@ -17,8 +17,8 @@ echo $passwordProduction
 
 #mysql -u root -e "SET PASSWORD FOR user@'127.0.0.1' = PASSWORD(‘(#ogg^qqvmBmtChlC&p.’);"
 
-mysql -u root -e "ALTER USER 'user'@'127.0.0.1' IDENTIFIED BY '$passwordUser';"
+mysql -u root -e "SET PASSWORD FOR 'user'@'127.0.0.1' IDENTIFIED BY '$passwordUser';"
 
-mysql -u root -e "ALTER USER 'development'@'localhost' IDENTIFIED BY '$passwordDevelopment';"
-mysql -u root -e "ALTER USER 'staging'@'localhost' IDENTIFIED BY '$passwordStaging';"
-mysql -u root -e "ALTER USER 'production'@'localhost' IDENTIFIED BY '$passwordProduction';"
+mysql -u root -e "SET PASSWORD FOR 'development'@'localhost' IDENTIFIED BY PASSWORD('$passwordDevelopment');"
+mysql -u root -e "SET PASSWORD FOR 'staging'@'localhost' IDENTIFIED BY PASSWORD('$passwordStaging');"
+mysql -u root -e "SET PASSWORD FOR 'production'@'localhost' IDENTIFIED BY PASSWORD('$passwordProduction');"
